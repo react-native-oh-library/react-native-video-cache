@@ -1,11 +1,12 @@
-import { NativeModules } from 'react-native';
+import { NativeModules, TurboModuleRegistry } from 'react-native';
+
+const VideoCacheNative = TurboModuleRegistry ? TurboModuleRegistry.get('ReactNativeVideoCache') : NativeModules.VideoCache
 
 export default (url) => {
   if (!global.nativeCallSyncHook) {
     return url
   }
-  return NativeModules.VideoCache.convert(url)
+  return VideoCacheNative.convert(url)
 };
 
-export const convertAsync = NativeModules.VideoCache.convertAsync;
-
+export const convertAsync = VideoCacheNative.convertAsync;

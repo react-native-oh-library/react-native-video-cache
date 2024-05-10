@@ -1,7 +1,7 @@
 {
-  "name": "react-native-video-cache",
+  "name": "@react-native-oh-tpl/react-native-video-cache",
   "title": "React Native Video Cache",
-  "version": "2.7.1",
+  "version": "2.7.4-0.0.1",
   "description": "Boost performance on online video loading and caching",
   "main": "index.js",
   "types": "index.d.ts",
@@ -27,5 +27,13 @@
   "devDependencies": {
     "react": "^16.8.3",
     "react-native": "^0.59.10"
-  }
+  },
+  "harmony": {
+    "codegenConfig": {
+        "specPaths": [
+            "./src"
+        ]
+    },
+    "alias": "react-native-video-cache"
+}
 }

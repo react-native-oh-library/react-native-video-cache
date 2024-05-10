@@ -1,0 +1,9 @@
+{
+    "module": {
+        "name": "react_native_video_cache",
+        "type": "har",
+        "deviceTypes": [
+            "default"
+        ]
+    }
+}
