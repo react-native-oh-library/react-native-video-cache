@@ -1,38 +1,13 @@
-# react-native-video-cache
+# @react-native-oh-tpl/react-native-video-cache
+本项目基于 [react-native-video-cache](https://github.com/zhigang1992/react-native-video-cache)
 
-* Fixed its android conflict with react native v0.67 (gradle > 0.7)
+## 文档地址 / Documentation URL 
 
-Boost performance on online video loading and caching
+[中文 / Chinese](https://gitee.com/react-native-oh-library/usage-docs/blob/master/zh-cn/react-native-video-cache.md)
 
-Use following libraries to do the heavy lifting.
+[英文 / English](https://gitee.com/react-native-oh-library/usage-docs/blob/master/en/react-native-video-cache.md)
 
-- iOS: https://github.com/ChangbaDevs/KTVHTTPCache
-- Android: https://github.com/danikula/AndroidVideoCache
 
-## Getting started
+## 请悉知 / Acknowledgements
 
-`$ yarn add react-native-video-cache`
-
-### Mostly automatic installation
-
-`$ react-native link react-native-video-cache`
-
-## Usage
-
-```javascript
-import convertToProxyURL from 'react-native-video-cache';
-...
-<Video source={{uri: convertToProxyURL(originalURL)}} />
-```
-
-### Install on android
-
-Edit your `android/build.gradle` file and add the following lines:
-
-```
-        maven {
-            url "$rootDir/../node_modules/react-native-video-cache/android/libs"
-        }
-```
-
-to your `allprojects/repositories`
+本项目基于 [The MIT License (XXX)](https://mitlicense.org/) ，请自由地享受和参与开源。
