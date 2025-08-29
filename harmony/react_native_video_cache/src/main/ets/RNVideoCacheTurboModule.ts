@@ -42,10 +42,12 @@ export class RNVideoCacheTurboModule extends TurboModule implements TM.ReactNati
     return this.proxy.getProxyUrl(url);
   }
 
-  public convertAsync(url: string): Promise<string> {
-    if (this.proxy == null) {
-      this.proxy = new HttpProxyCacheServer(this.reactContext);
-    }
-    return Promise.resolve(this.proxy.getProxyUrl(url));
-  }
+  public async convertAsync(url: string): Promise<string> {
+    if (this.proxy == null) {
+      this.proxy = new HttpProxyCacheServer(this.reactContext);
+    }
+    const originalUrl = await this.proxy.getProxyUrl(url);
+    const modifiedUrl = originalUrl.replace(/(:\d+)\//, '$1//');
+    return modifiedUrl;
+  }
 }
